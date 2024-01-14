@@ -7,12 +7,6 @@
 </head>
 <body>
 
-  <div class="dark-mode-toggle" onclick="toggleDarkMode()">
-    <span class="moon-sun">🌙</span>
-    <div id="slider" class="slider"></div>
-    <span class="moon-sun">☀️</span>
-  </div>
-
   <h1>Vertical Dash</h1>
   <canvas id="gameCanvas" width="720" height="480"></canvas>
 
@@ -26,17 +20,17 @@
 
     <h2>How to Play:</h2>
     <ul>
-      <li>Press the space bar to make the ship ascend or descend.</li>
+      <li>Press the space bar or click to make the ship ascend or descend.</li>
       <li>Avoid colliding with the red obstacles.</li>
       <li>Your score increases with time, and the game speeds up.</li>
       <li>The game ends if the ship collides with an obstacle.</li>
       <li>Press the space bar to restart after a game over.</li>
     </ul>
 
-    <h2>How This Game Was Made</h2>
+    <h2>Why this game was made</h2>
     <p>
       This game is a school project for the Faculty of Science of Rabat, and it provides an opportunity
-      to showcase how the game was developed.
+      to showcase basic game developpement.
     </p>
     <p>
       The core of the game relies on the &lt;canvas&gt; element in HTML. The canvas element allows you
@@ -75,6 +69,21 @@
           }
         </code>
       </pre>
+      <h3>Event listeners</h3>
+      <pre>
+        <code>
+          document.addEventListener("keydown", function(event) {
+            //if the space bar is pressed, set movingUp to true or false depending on the current state
+          });
+          canvas.addEventListener("click", function(event) {
+            //if the mouse is clicked, set movingUp to true
+          });
+          //for mobile users
+          canvas.addEventListener('touchstart', function(event) {
+            //if the screen is touched, set movingUp to true
+          });
+        </code>
+      </pre>
       <h3>Main gameLoop</h3>
       <pre>
         <code>
@@ -91,10 +100,11 @@
             //if not, call the gameLoop function again
           }
         </code>
+      </pre>
     </div>
-
+    <h2>Source code here</h2>
+    <p>The source code of this game can be found on my github page here: <a href="https://github.com/TheHunter365/thehunter365.github.io">game code</a></p>
     <script src="script.js"></script>
-    <script src="darkmode.js"></script>
   </div>
 </body>
 </html>

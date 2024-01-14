@@ -59,27 +59,3 @@ h3 {
   color: #e74c3c;
   margin-bottom: 10px;
 }
-
-.dark-mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.dark-mode-toggle:hover {
-  transform: scale(1.1);
-}
-
-.moon-sun {
-  font-size: 24px;
-  margin: 0 5px;
-}
-
-.dark-mode-toggle.dark-mode .moon-sun {
-  order: 1;
-}

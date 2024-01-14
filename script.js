@@ -10,9 +10,11 @@ const ship = {
   height: 20,
   speed: 10,
 };
-let obstacleSpeed = 5;
 let obstacles = [];
 let score = 0;
+
+let obstacleSpeed = 5 + Math.sqrt(score) / 2;
+
 
 function drawShip() {
   ctx.fillStyle = 'blue';
