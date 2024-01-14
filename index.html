@@ -7,6 +7,12 @@
 </head>
 <body>
 
+  <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <span class="moon-sun">🌙</span>
+    <div id="slider" class="slider"></div>
+    <span class="moon-sun">☀️</span>
+  </div>
+
   <h1>Vertical Dash</h1>
   <canvas id="gameCanvas" width="720" height="480"></canvas>
 
@@ -67,13 +73,28 @@
           function drawObstacles() {
             //draw the obstacles, i used the forEach method to iterate on the list
           }
-          
-
         </code>
       </pre>
+      <h3>Main gameLoop</h3>
+      <pre>
+        <code>
+          function gameLoop() {
+            //clear the canvas
+            //draw the ship
+            //draw the obstacles
+            //check for collisions
+            //update the score
+            //update the speed
+            //update the ship position
+            //generate obstacles
+            //check if the game is over
+            //if not, call the gameLoop function again
+          }
+        </code>
     </div>
 
     <script src="script.js"></script>
+    <script src="darkmode.js"></script>
   </div>
 </body>
 </html>

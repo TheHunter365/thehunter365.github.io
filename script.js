@@ -39,6 +39,7 @@ function drawObstacles() {
 
 var movingUp = false;
 
+//spacebar listener
 document.addEventListener('keydown', function (event) {
   if (event.code === 'Space') {
     event.preventDefault();
@@ -46,7 +47,13 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-//mobile version
+//on click listener
+canvas.addEventListener('click', function(event) {
+  event.preventDefault();
+  movingUp = !movingUp;
+});
+
+//mobile compatibility
 canvas.addEventListener('touchstart', function(event) {
   event.preventDefault();
   movingUp = !movingUp;
@@ -93,6 +100,12 @@ function gameLoop() {
           if (event.code === 'Space') {
             location.reload();
           }
+        });
+        canvas.addEventListener('click', function(event) {
+          location.reload();
+        });
+        canvas.addEventListener('touchstart', function(event) {
+          location.reload();
         });
       }
     });
