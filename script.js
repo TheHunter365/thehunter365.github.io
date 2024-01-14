@@ -46,6 +46,12 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+//mobile version
+canvas.addEventListener('touchstart', function(event) {
+  event.preventDefault();
+  movingUp = !movingUp;
+});
+
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -82,12 +88,7 @@ function gameLoop() {
         ship.y < obstacle.y + obstacle.height &&
         ship.y + ship.height > obstacle.y
       ) {
-        //Write game over text in canvas
-       
-        //pause the game
-        
         gameOver = true;
-        //Reload page on keypress
         document.addEventListener('keydown', function (event) {
           if (event.code === 'Space') {
             location.reload();
