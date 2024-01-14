@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vertical Dash Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Vertical Dash</h1>
+  <canvas id="gameCanvas" width="720" height="480"></canvas>
+
+  <div id="gameExplanation">
+    <h1>Welcome to Vertical Dash!</h1>
+    <p>
+      Vertical Dash is a simple game where you control a blue ship using the space bar.
+      The objective is to avoid red obstacles and score as many points as possible. The game
+      speeds up as your score increases.
+    </p>
+
+    <h2>How to Play:</h2>
+    <ul>
+      <li>Press the space bar to make the ship ascend or descend.</li>
+      <li>Avoid colliding with the red obstacles.</li>
+      <li>Your score increases with time, and the game speeds up.</li>
+      <li>The game ends if the ship collides with an obstacle.</li>
+      <li>Press the space bar to restart after a game over.</li>
+    </ul>
+
+    <h2>How This Game Was Made</h2>
+    <p>
+      This game is a school project for the Faculty of Science of Rabat, and it provides an opportunity
+      to showcase how the game was developed.
+    </p>
+    <p>
+      The core of the game relies on the &lt;canvas&gt; element in HTML. The canvas element allows you
+      to draw graphics and create interactive elements using JavaScript. Learn more about HTML5 canvas
+      <a href="https://www.w3schools.com/html/html5_canvas.asp">here</a>.
+    </p>
+
+    <h2>How it works</h2>
+    <p>
+      The game is created using JavaScript and the HTML5 canvas API. Below is a simplified version of
+      the code that powers Vertical Dash. For a detailed explanation, refer to the provided JavaScript code.
+    </p>
+
+    <div class="code-container">
+      <h3>State variables</h3>
+      <p>These variables track the state of the game</p>
+      <pre>
+        <code>
+          var gameOver = false; //is the game running ? will be usefull in the main gameLoop function
+          var movingUp = false; //the state of the ship movement, is it up or down
+          let obstacles = []; //the set of obstacles that will be drawn randomly on the canvas
+          let score = 0; //current score 
+        </code>
+      </pre>
+      <h3>Core functions</h3>
+      <pre>
+        <code>
+          function drawShip() {
+            //draw the ship, ship is stored in an object
+          }
+          function generateObstacle() {
+            //Generate obstacles randomly and add them to the array above using Math.random()
+          }
+          function drawObstacles() {
+            //draw the obstacles, i used the forEach method to iterate on the list
+          }
+          
+
+        </code>
+      </pre>
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
